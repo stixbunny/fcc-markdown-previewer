@@ -16,11 +16,68 @@
     padding-top: 5px;
 }
 
+textarea {
+  background-color: #c0d8d8;
+  color: black;
+  font-family: monospace, sans-serif;
+}
+
 #previewerWrapper {
     max-width: 800px;
     border: 1px solid black;
     box-shadow: 1px 1px 10px 2px grey;
     margin: 0 auto;
+}
+
+.toolbar {
+  background-color: #4aa3a3;
+}
+
+#preview {
+  padding: 1em 1em;
+  background-color: #c0d8d8;
+  overflow-wrap: break-word;
+}
+
+code {
+  background-color: aliceblue;
+  font-weight: bold;
+  font-size: 0.875rem;
+}
+
+pre {
+  background-color: aliceblue;
+  white-space: pre;
+  font-family: monospace, sans-serif;
+}
+
+#preview > p > code {
+  padding: 3px;;
+}
+
+img {
+  width: 100%;
+}
+
+blockquote {
+  border-left: 3px solid black;
+  padding-left: 5px;
+  margin-left: 25px;
+}
+
+table {
+  text-indent: initial;
+  border-collapse: collapse;
+  border-spacing: 2px;
+}
+
+th, td {
+  border: 2px solid black;
+  padding: 0 5px;
+}
+
+tr {
+  display: table-row;
 }
   
 @media screen and (max-width: 650px) {
