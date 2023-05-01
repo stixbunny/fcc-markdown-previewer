@@ -1,10 +1,16 @@
 import Toolbar from './Toolbar.jsx'
 
-export default function Previewer({translation}) {
-    return (
-        <div id="previewerWrapper">
-            <Toolbar />
-            <div id="preview" dangerouslySetInnerHTML={{__html: translation}}></div>
-        </div>
-    )
+export default function Previewer({translation, isEditorMaxed, isPreviewMaxed, setIsPreviewMaxed}) {
+    const name="Previewer"
+    if (isEditorMaxed) {
+        return (<></>)
+    }
+    else {
+        return (
+            <div id="previewerWrapper">
+                <Toolbar name={name} isPreviewMaxed={isPreviewMaxed} setIsPreviewMaxed={setIsPreviewMaxed} />
+                <div id="preview" dangerouslySetInnerHTML={{__html: translation}}></div>
+            </div>
+        )
+    }
 }

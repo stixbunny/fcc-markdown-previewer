@@ -6,8 +6,10 @@ import Previewer from './Previewer.jsx'
 import { useEffect } from 'react'
 
 function App() {
-  const [content, setContent] = useState("");
-  const [translation, setTranslation] = useState("");
+  const [content, setContent] = useState("")
+  const [translation, setTranslation] = useState("")
+  const [isEditorMaxed, setIsEditorMaxed] = useState(false)
+  const [isPreviewMaxed, setIsPreviewMaxed] = useState(false)
   useEffect(() => {
     const initialText = `# Welcome to my React Markdown Previewer!
 
@@ -56,9 +58,9 @@ And here. | Okay. | I think we get it.
   }, [])
   return (
     <>
-      <Editor setContent={setContent} content={content} />
+      <Editor setContent={setContent} content={content} isPreviewMaxed={isPreviewMaxed} isEditorMaxed={isEditorMaxed} setIsEditorMaxed={setIsEditorMaxed} />
       <Converter setTranslation={setTranslation} content={content} />
-      <Previewer translation={translation} />
+      <Previewer translation={translation} isEditorMaxed={isEditorMaxed} isPreviewMaxed={isPreviewMaxed} setIsPreviewMaxed={setIsPreviewMaxed} />
     </>
   )
 }

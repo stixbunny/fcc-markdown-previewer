@@ -9,11 +9,17 @@ function TextEditor({setContent, content}) {
     )
 }
 
-export default function Editor({setContent, content}) {
-    return (
-        <div id="editorWrapper">
-            <Toolbar />
-            <TextEditor setContent={setContent} content={content}/>
-        </div>
-    )
+export default function Editor({setContent, content, isPreviewMaxed, isEditorMaxed, setIsEditorMaxed}) {
+    const name = "Editor"
+    if(isPreviewMaxed) {
+        return (<></>)
+    }
+    else {
+        return (
+            <div id="editorWrapper">
+                <Toolbar name={name} isEditorMaxed={isEditorMaxed} setIsEditorMaxed={setIsEditorMaxed}/>
+                <TextEditor setContent={setContent} content={content}/>
+            </div>
+        )
+    }
 }
