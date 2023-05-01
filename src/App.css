@@ -17,11 +17,11 @@
     max-width: 600px;
     border: 1px solid black;
     box-shadow: 1px 1px 10px 2px grey;
-    margin: 0 auto;
+    margin: 0 auto 1rem;
 }
 
 #editor {
-    width: 99%;
+    width: 100%;
     min-height: 200px;
     resize: vertical;
     outline: none;
@@ -34,6 +34,11 @@ textarea {
   background-color: #c0d8d8;
   color: black;
   font-family: monospace, sans-serif;
+  height: 100%;
+  width: 100%;
+  -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+  -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+  box-sizing: border-box;
 }
 
 #previewerWrapper {
@@ -97,7 +102,6 @@ tr {
 @media screen and (max-width: 650px) {
     #editorWrapper {
       width: 80vw;
-      margin: 0 auto;
     }
 
     #previewerWrapper {
